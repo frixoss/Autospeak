@@ -15,8 +15,8 @@ boolean takeLowTime;
 int  pirPin = 2;   //the digital pin connected to the PIR sensor's output
 // This code is for the builtin led. Using the PIR the builtin led flashes
 
-#define echoPin 10 // Echo Pin
-#define trigPin 11 // Trigger Pin
+#define echoPin 13 // Echo Pin
+#define trigPin 12 // Trigger Pin
 
 int maximumRange = 1000; // Maximum range needed
 int minimumRange = 0; // Minimum range needed
@@ -34,7 +34,7 @@ SoftwareSerial mySerial(10, 11);
 
 # define ACTIVATED LOW
 
-int buttonNext = 2;
+int buttonNext = 2;     // τα κουμπιά ουσιαστικά δεν χρειάζονται αλλά ούτε επηρεάζουν τον κώδικα. τα κρατήσαμε απλά μήπως μας χρειαστούν στο μέλλον
 int buttonPause = 3;
 int buttonPrevious = 4;
 boolean isPlaying = false;
