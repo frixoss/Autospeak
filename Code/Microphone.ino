@@ -15,11 +15,11 @@ void setup() {
  
 void loop() {
 
-    if (sound > 500) {
+    if (sound > 50) {
     digitalWrite(LED_BUILTIN, LOW);
     } 
 
-    if (sound < 500) {
+    if (sound < 50) {
     digitalWrite(LED_BUILTIN, LOW);
   }
   /*  if (sound > 40) {
@@ -43,9 +43,5 @@ void loop() {
 
   sound = analogRead(AO_pin);
   Serial.print(digitalRead(DO_pin));
-  Serial.print("-");
   Serial.println(analogRead(AO_pin));
-
- 
-  
 }
