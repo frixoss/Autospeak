@@ -1,5 +1,5 @@
-#define echoPin 10 // Echo Pin
-#define trigPin 11 // Trigger Pin
+#define echoPin 13 // Echo Pin
+#define trigPin 12 // Trigger Pin
 
 int maximumRange = 200; // Maximum range needed
 int minimumRange = 0; // Minimum range needed
