@@ -21,7 +21,7 @@ int maximumRange = 1000; // Maximum range needed
 int minimumRange = 0; // Minimum range needed
 long duration, distance; // Duration used to calculate distance
 
-/////////////////////////////----------------------------------/////////////////////////////////////////////------------------------------------------
+/////////////////////////////----------------------------------/////////////////////////////////////////////-------------
 
 #include "SoftwareSerial.h"
 SoftwareSerial mySerial(10, 11);
@@ -40,7 +40,7 @@ boolean isPlaying = false;
 
 
 
-///////////////////////////--------------------------------------///////////////////////////////////////////--------------------------------------------
+///////////////////////////--------------------------------------///////////////////////////////////////////---------------------------------------
 //SETUP
 void setup(){
   Serial.begin(9600);
@@ -58,15 +58,7 @@ void setup(){
     Serial.println("SENSOR ACTIVE");
     delay(50);
     
- pinMode(trigPin, OUTPUT);
- pinMode(echoPin, INPUT);
- pinMode(LED_BUILTIN, OUTPUT); // Use LED indicator (if required)
-  pinMode(buttonPause, INPUT);
-digitalWrite(buttonPause,HIGH);
-pinMode(buttonNext, INPUT);
-digitalWrite(buttonNext,HIGH);
-pinMode(buttonPrevious, INPUT);
-digitalWrite(buttonPrevious,HIGH);
+
 
 mySerial.begin (9600);
 delay(1000);
