@@ -10,6 +10,7 @@ long unsigned int lowIn;
 long unsigned int pause = 5000;  
 
 boolean lockLow = true;
+boolean isPlaying = false; // ayto einai gia to mp3
 boolean takeLowTime;  
 int  pirPin = 2;   //the digital pin connected to the PIR sensor's output
 // This code is for the builtin led. Using the PIR the builtin led flashes
@@ -83,7 +84,7 @@ void loop(){
  
  //Calculate the distance (in cm) based on the speed of sound.
  distance = duration/58.2;
- 
+ int playstate = 0
  if (distance <= maximumRange || distance >= minimumRange){
  /* Send a negative number to computer and Turn LED ON 
  to indicate "out of range" */
@@ -95,21 +96,22 @@ void loop(){
  turn LED OFF to indicate successful reading. */
  Serial.println(distance);
  digitalWrite(LED_BUILTIN, LOW); 
+   playstate=1;
  }
  
  //Delay 50ms before next reading.
  delay(50);
 
- ////////////////////////////////////////////////
-     /*  if(lockLow){  
-         //makes sure we wait for a transition to LOW before any further output is made:
-         lockLow = false;            
-         Serial.println("---");
-         Serial.print("motion detected at ");
-         Serial.print(millis()/1000);
-         Serial.println(" sec"); 
-         delay(50);
-         }         */
-         takeLowTime = true;
+if ( playstate==1 ){     // edw energopoieitai to mp3 kai paizei to tragoudi pou tou exoyme valei sthn sd card
+  if (digitalRead(isPlaying)==High){
+    mp3.setVolume(24);
+    void setup () {
+    mySerial.begin (9600);
+    delay(1000);
+    playFirst();
+    isPlaying = true;
+    }
+}
+    }
        }
   }
