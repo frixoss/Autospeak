@@ -1,5 +1,5 @@
 //VARS
-//the time we give the sensor to calibrate (10-60 secs according to the datasheet)
+// σε αυτό το scetch ουσιαστικά συνδυάζουμε όλους τους σένσορες μεταξύ τους. 
 int calibrationTime = 30;        
 
 //the time when the sensor outputs a low impulse
